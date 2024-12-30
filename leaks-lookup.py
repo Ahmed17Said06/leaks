@@ -4,7 +4,7 @@ import json
 
 # Define the API endpoint and API key
 API_ENDPOINT = "https://leak-lookup.com/api/search"
-API_KEY = "bafdd66bd406c61364a3f77bd590501f"
+API_KEY = ""
 
 # Available query types
 AVAILABLE_TYPES = [
