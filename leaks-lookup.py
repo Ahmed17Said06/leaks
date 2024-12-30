@@ -1,9 +1,10 @@
 import requests
 import time
+import json
 
 # Define the API endpoint and API key
 API_ENDPOINT = "https://leak-lookup.com/api/search"
-API_KEY = ""
+API_KEY = "bafdd66bd406c61364a3f77bd590501f"
 
 # Available query types
 AVAILABLE_TYPES = [
@@ -56,9 +57,13 @@ def query_leaks_lookup_all_types(query_value):
 
 if __name__ == "__main__":
     # Value to search for
-    query_value = "johndoe"
+    query_value = "susan james"
     print(f"Querying Leaks-lookup API for all available types with value: {query_value}")
     results = query_leaks_lookup_all_types(query_value)
+
+    # Save results to a JSON file
+    with open('leaks_lookup_results.json', 'w') as json_file:
+        json.dump(results, json_file, indent=4)
 
     # Display results
     if results:
